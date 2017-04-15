@@ -5,21 +5,31 @@
 # [x]Player-guess logic
 # [x]If letter is right move on. If not add a body part
 
-words = ["dog", "doggies", "dogs", "dial"]
+# Available words
+words = ["dog", "doggies", "dogs", "dial", "far", "title", "package", "tiny"]
 
+# Computer chooses a random word from words array
 $word = words.sample
+
+# Initialize various arrays for later use
 $array = Array.new
 $good = Array.new
 $empty = Array.new
 
+# Put each character of the selected word into an array
+# Then populate another array with blanks == number of
+# letters in the selected word
 $word.each_char do |j|
   $array.push(j)
   j = "__ "
   $empty.push(j)
 end
 
+# Get number of letters in the word to Display
+# to user
 $blanks = $word.length.to_i
 
+# Begin game logic
 def hang
   puts
   puts " ______ "
@@ -162,6 +172,8 @@ def hang
         puts "|     [ ] "
         puts "|       "
         puts "----    "
+        puts
+        puts "The word is #{$word}"
         puts
         puts "You Lose!"
         puts
