@@ -1,5 +1,5 @@
 # HANGMAN
-# [x] create arrays of words
+# [x]create arrays of words
 # [x]randomly select a word
 # [x]Display blanks = to number of letters
 # [x]Player-guess logic
